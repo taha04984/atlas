@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.nav{
+    height: 10vh;
+    width: 100%;
+    padding: 0 1rem 0 0;
+    background-color: black;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav .logo{
+    width: 20%;
+    height: 100%;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+}
+.logo i {
+    display: none;
+    font-size: 1.5rem;
+}
+
+.logo h3{
+    font-size: 1.25rem;
+}
+
+.logo {
+    gap: 10px;
+}
+
+.navlinks{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navlinks a {
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    color: white;
+}
+
+.navlinks a:hover{
+    border-bottom: 1px solid white;
+}
+
+.theme {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.switch {
+    border: 1px solid white;
+    border-radius: 50px;
+    height: 20px;
+    width: 40px;
+    display: flex;
+}
+
+.toggle{
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    border-radius: 50px;
+}
+
+
+/* =======================================================Main Styling======================================================= */
+main {
+    height: 90vh;
+    width: 100%;
+    background-image: url(Images/bg1.jpg);
+    background-size: cover;
+    background-position: center;
+
+    
+}
+
+.hero{
+    background-color: rgba(0, 0, 0, 0.8);
+    gap: 25px;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: blur 3s linear ;
+}
+
+@keyframes blur {
+    0%{
+        background-color: rgba(0, 0, 0, 0);
+    }
+    100%%{
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+}
+
+.hero h1 {
+    padding: 10px;
+}
+
+
+.hero a {
+    text-decoration: none;
+    background-color: white;
+    padding: 1rem 3rem;
+    color: black;
+    font-weight: 600;
+}
+
+.atlas {
+    width: 100%;
+    white-space: no-wrap;
+    overflow: hidden;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .nav .logo{
+        padding: 0 20px;
+        width: 80%;
+    }
+
+    .logo i {
+        display: block;
+    }
+
+    .navlinks {
+        display: flex;
+        flex-direction: column;
+        height: 90vh;
+        width: 50%;
+
+        position: absolute;
+        top: 10vh;
+        left: -50%;
+
+        transition: 0.5s ease-in;
+    }
+
+    .navlinks a{
+        background-color: black;
+        width: 100%;
+        border-bottom: 1px solid white;
+        border-top: 1px solid white;
+    }
+
+    .navlinks a:first-child{
+        border-top: none;
+    }
+
+    .navlinks a:last-child{
+        border-bottom: none;
+    }
+
+    .left{
+        position: absolute;
+        left: 0%;
+    }
+
+    .switch{
+        height: 20px;
+        width: 40px;
+    }
+
+}
+
+
+
+/* ============================================Main Styling============================================ */
+
