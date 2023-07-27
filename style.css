@@ -1,0 +1,361 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow-x: hidden;
+}
+
+.nav{
+    height: 10vh;
+    width: 100%;
+    padding: 0 1rem 0 0;
+    background-color: black;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav .logo{
+    width: 20%;
+    height: 100%;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+}
+.logo i {
+    display: none;
+    font-size: 1.5rem;
+}
+
+.logo h3{
+    font-size: 1.25rem;
+}
+
+.logo {
+    gap: 10px;
+}
+
+.navlinks{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navlinks a {
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    color: white;
+}
+
+.navlinks a:hover{
+    border-bottom: 1px solid white;
+}
+
+.theme {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.switch {
+    border: 1px solid white;
+    border-radius: 50px;
+    height: 20px;
+    width: 40px;
+    display: flex;
+}
+
+.toggle{
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    border-radius: 50px;
+}
+
+
+/* =======================================================Main Styling======================================================= */
+main {
+    height: 90vh;
+    width: 100%;
+    background-image: url(Images/bg1.jpg);
+    background-size: cover;
+    background-position: center;
+
+    
+}
+
+.hero{
+    background-color: rgba(0, 0, 0, 0.8);
+    gap: 25px;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: blur 3s linear ;
+}
+
+@keyframes blur {
+    0%{
+        background-color: rgba(0, 0, 0, 0);
+    }
+    100%%{
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+}
+
+.hero h1 {
+    padding: 10px;
+}
+
+
+.hero a {
+    text-decoration: none;
+    background-color: white;
+    padding: 1rem 3rem;
+    color: black;
+    font-weight: 600;
+}
+
+.atlas {
+    width: 100%;
+    white-space: no-wrap;
+    overflow: hidden;
+}
+
+/* =====================================Flags Styling=====================================*/
+
+.data-load {
+    background-color: white;
+    width: 100vw;
+    height: 20vh;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+}
+
+
+#input, .search {
+    height: 2rem;
+}
+
+#input  {
+    width: 70%;
+    border: none;
+    border-bottom: 3px solid black;
+    outline: none;
+    font-weight: 700;
+}
+
+.search{
+    width: 10%;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+
+.textarea {
+    width: 30%;
+    /* border: 1px solid black; */
+}
+
+.search{
+    text-decoration: none;
+}
+
+
+  /* blinking code  */
+/* .cursor{
+    width: 5px;
+    height: 2rem;
+    border: 1px solid black;
+    animation: blink 1s infinite;
+}
+
+  @keyframes blink {
+    50%{
+        opacity: 0;
+    }
+  } */
+.result{
+    display: none;
+}
+
+
+
+.result-toggle{
+    background-color: white;
+    color: black;
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 0 0 5rem 0;
+}
+
+
+.flag-img{
+    width: 50% ;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.content {
+    display: flex;
+    width: 25%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+
+    border-radius: 10px;
+    background-color: rgb(73, 64, 64);
+    color: white;
+
+    transition: linear 0.3s;
+}
+
+.text-area{
+    margin-top: 2rem;
+    width: 100%;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.text-area p {
+    margin: 0.5rem 0;
+    display: block;
+    width: 80%;
+}
+  
+
+
+/* ================================================Mobile Styling================================================ */
+@media only screen and (max-width: 768px) {
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .nav .logo{
+        padding: 0 20px;
+        width: 80%;
+    }
+
+    .logo i {
+        display: block;
+    }
+
+    .navlinks {
+        display: flex;
+        flex-direction: column;
+        height: 90vh;
+        width: 50%;
+
+        position: absolute;
+        top: 10vh;
+        left: -50%;
+
+        transition: 0.5s ease-in;
+    }
+
+    .navlinks a{
+        background-color: black;
+        width: 100%;
+        border-bottom: 1px solid white;
+        border-top: 1px solid white;
+    }
+
+    .navlinks a:first-child{
+        border-top: none;
+    }
+
+    .navlinks a:last-child{
+        border-bottom: none;
+    }
+
+    .left{
+        position: absolute;
+        left: 0%;
+    }
+
+    .switch{
+        height: 20px;
+        width: 40px;
+    }
+
+    .data-load{
+        flex-direction: column;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .search{
+        width: 70%;
+    }
+
+
+
+    .content{
+        width: 60%;
+        margin-top: 2rem;
+    }
+
+}
+
+
+@media only screen and (max-width: 500px){
+
+    .content {
+        width: 80%;
+    }
+}
+
+/* ============================================Main Styling============================================ */
+
